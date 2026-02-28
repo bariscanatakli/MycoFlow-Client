@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.gitignore
+README.md
+AGENTS.md
+__tests__
+coverage
+*.log
+.env*
+.DS_Store
+*.pem
+dist
+mycelium_report.latex
+mycelium_report.pdf
