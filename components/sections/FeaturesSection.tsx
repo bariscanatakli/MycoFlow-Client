@@ -133,6 +133,26 @@ export default function FeaturesSection() {
         </svg>
       ),
     },
+    {
+      title: 'Adaptive Baseline Learning',
+      description: 'Sliding EWMA baseline (decay=0.01) refreshes every 60 cycles. Thresholds adapt to your actual ISP conditions — no manual tuning.',
+      icon: <span className="text-xl">🧠</span>,
+    },
+    {
+      title: 'Zero Flash Writes',
+      description: 'All state lives in tmpfs (/tmp) or RAM buffers. No SD card / NAND wear. Safe for routers with limited write cycles.',
+      icon: <span className="text-xl">🔒</span>,
+    },
+    {
+      title: 'DNS-Based Classification',
+      description: '585-entry domain catalog supplements flow heuristics. Streaming services, gaming platforms, and CDNs identified at DNS resolution time.',
+      icon: <span className="text-xl">🗂️</span>,
+    },
+    {
+      title: 'Per-Device DSCP',
+      description: 'Each device gets its own persona based on its flow patterns. Gamer and remote-worker on the same WiFi network — both get optimal treatment.',
+      icon: <span className="text-xl">📱</span>,
+    },
   ];
 
   const tiers = Object.values(QOS_TIERS);
@@ -202,7 +222,7 @@ export default function FeaturesSection() {
               Built for Everyone
             </h3>
             <p className="text-muted max-w-2xl mx-auto">
-              From network engineers to C-suite executives, MycoFlow serves all stakeholders.
+              Six traffic personas auto-detected in real time. Each device gets optimal treatment.
             </p>
           </div>
 

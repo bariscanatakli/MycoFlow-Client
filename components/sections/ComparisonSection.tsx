@@ -180,10 +180,10 @@ function BeforeAfterToggle() {
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'RTT', before: '45ms', after: '12ms' },
-          { label: 'Jitter', before: '15ms', after: '2.3ms' },
-          { label: 'Loss', before: '2.5%', after: '0.1%' },
-          { label: 'Throughput', before: '71%', after: '100%' },
+          { label: 'RTT', before: '693ms', after: '0.1ms' },
+          { label: 'Jitter', before: '34.7ms', after: '0.2ms' },
+          { label: 'Loss', before: '2.8%', after: '0.05%' },
+          { label: 'Throughput', before: '60%', after: '96%' },
         ].map((stat, i) => (
           <div key={i} className="text-center p-4 rounded-xl bg-background">
             <div className={`text-2xl font-bold transition-all duration-500 ${
@@ -218,7 +218,7 @@ export default function ComparisonSection() {
       before: beforeMycoFlow.rtt,
       after: afterMycoFlow.rtt,
       unit: 'ms',
-      maxValue: 100,
+      maxValue: 700,
       isLowerBetter: true,
     },
     {
@@ -226,7 +226,7 @@ export default function ComparisonSection() {
       before: beforeMycoFlow.jitter,
       after: afterMycoFlow.jitter,
       unit: 'ms',
-      maxValue: 30,
+      maxValue: 40,
       isLowerBetter: true,
     },
     {
@@ -278,7 +278,7 @@ export default function ComparisonSection() {
 
         {/* Animated Comparison Bars */}
         <div ref={ref} className="bg-surface rounded-2xl p-8 border border-border mb-12">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <h3 className="text-xl font-semibold text-foreground">Performance Breakdown</h3>
             <div className="flex gap-6">
               <div className="flex items-center gap-2">
@@ -339,10 +339,10 @@ export default function ComparisonSection() {
 
         {/* Platform info */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted mb-4">Based on simulation data • Currently in development for OpenWrt</p>
+          <p className="text-sm text-muted mb-4">QEMU benchmark • OpenWrt 23.05 on emulated MT7981B • 5-client simultaneous scenario</p>
           <div className="flex justify-center gap-2 items-center">
-            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">OpenWrt 21.02+</span>
-            <span className="text-xs text-muted">More platforms coming soon</span>
+            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">OpenWrt 23.05+</span>
+            <span className="text-xs text-muted">Primary target: Xiaomi AX3000T</span>
           </div>
         </div>
       </div>
